@@ -118,7 +118,7 @@ class IntegrationTest extends TestCase
     protected function ignoreEvents()
     {
         $dispatcher = Mockery::mock('Illuminate\Contracts\Events\Dispatcher');
-        $dispatcher->shouldReceive('fire');
+        $dispatcher->shouldReceive('dispatch');
         app()->instance('events', $dispatcher);
     }
 }
